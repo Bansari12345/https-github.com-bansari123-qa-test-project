@@ -1,11 +1,32 @@
-Installed Python plungins latest version 
+Automation Framework Setup
 
-Installed playwright pytest plungins latest version 
+Overview
+This repository contains the setup for an automation framework using Python, Playwright, Pytest, and Node.js.
 
-Installed latest node js
+Prerequisites
+- Python (latest version)
+- Playwright Pytest plugins (latest version)
+- Node.js (latest version)
+- VS Code (latest version)
+- Loguru (for Python logging)
+- HTTP Client configured for API Testing
 
-Installed VS Code
+Setup Instructions
+1. Install Python and required plugins:
+    - `pip install playwright pytest`
+    - `pip install loguru`
+2. Install Node.js (latest version)
+3. Install VS Code (latest version)
+4. Configure HTTP Client for API Testing
 
-Installed loguru for python
+Running Tests
+- Use Pytest to run tests: `pytest`
 
-HTTP client configured for API Testing 
+Dependencies
+- Python
+- Playwright
+- Pytest
+- Node.js
+- Loguru
+- HTTP Client
+

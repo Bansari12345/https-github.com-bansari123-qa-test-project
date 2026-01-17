@@ -1,32 +1,83 @@
-Automation Framework Setup
+# GitHub Public Interface Testing Challenge
 
-Overview
-This repository contains the setup for an automation framework using Python, Playwright, Pytest, and Node.js.
+## Overview
+This project contains automated UI and API tests for GitHub’s public interface, developed as part of a QA Automation Engineer assessment.
 
-Prerequisites
-- Python (latest version)
-- Playwright Pytest plugins (latest version)
-- Node.js (latest version)
-- VS Code (latest version)
-- Loguru (for Python logging)
-- HTTP Client configured for API Testing
+**Tech Stack**
+- Language: Python (pytest) or JavaScript
+- Framework: Playwright
+- Browser: Visible mode only (non-headless)
+- Logging: loguru (Python) / winston (JavaScript)
 
-Setup Instructions
-1. Install Python and required plugins:
-    - `pip install playwright pytest`
-    - `pip install loguru`
-2. Install Node.js (latest version)
-3. Install VS Code (latest version)
-4. Configure HTTP Client for API Testing
+## Prerequisites
 
-Running Tests
-- Use Pytest to run tests: `pytest`
+### Python
+- Python 3.12+
+- pytest
+- pytest-playwright
+- playwright
+- requests
+- loguru
 
-Dependencies
-- Python
-- Playwright
-- Pytest
-- Node.js
-- Loguru
-- HTTP Client
+### JavaScript
+- Node.js 20+
+- @playwright/test
+- axios
+- winston
 
+Install Playwright browsers:
+```bash
+playwright install
+```
+
+## Project Structure
+tests/
+├── conftest.py / playwright.config.js
+├── config.py / config.js
+├── test_repository_ui.py
+├── test_repository_api.py
+├── test_search.py
+├── helpers.py
+├── logs/
+│   └── tests.log
+├── requirements.txt / package.json
+└── README.md
+
+## What Is Tested
+
+### UI Tests
+- Repository details validation
+- Navigation and file rendering
+- Metadata and stats verification
+
+### API Tests
+- Repository details
+- Contents API
+- Error handling
+- Rate limit headers
+
+## Logging & Reporting
+- Console and file logging
+- HTML test report generation
+
+## Test Execution
+
+### Python
+```bash
+pytest --headed --slowmo=500 --html=report.html
+```
+
+### JavaScript
+```bash
+npx playwright test --headed
+```
+
+## Critical Requirements
+- Browser must be visible (headless = false)
+- slow_mo = 500
+- Tests must run successfully before submission
+
+there is no spoon
+
+## Final Note
+The goal is to write tests as if GitHub were your own product.
